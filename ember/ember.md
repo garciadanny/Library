@@ -429,3 +429,48 @@ Next, we'll want to set the model data for this route (`TodosActiveRoute`) to be
 	    this.render('todos/index', {controller: controller});
 	  }
 	});
+
+## Computed properties (Another Example)
+
+Let's say we want functionality that only displays a `<clear completed>` button if there are any completed todos, as well as, dynamically displays the count of completed todos.
+
+We can use [computed properties](http://emberjs.com/guides/object-model/computed-properties/) to create a function that will tell us whether or not there are any completed todos, and another that  will return the number of completed todos; both of which are dependent upon each other. We can then use these function just like we would any static property.
+
+todos_controller.js
+
+  Todos.TodosController = Ember.ArrayController.extend({
+    actions: {
+      ...
+    },
+
+    // Returns the number of completed todos, if any.
+    completed: function() {
+      return this.filterBy('isCompleted', true).get('length');
+    }.property('@each.isCompleted'),
+
+    // Returns a boolean based on whether there are any completed todos or not.
+    hasCompleted: function() {
+      return this.get('completed') > 0;
+    }.property('completed')
+  });
+
+The `completed` computed property depends on the `isCompleted` property of each todo.
+
+  property('@each.isCompleted')
+
+The `hasCompleted` computed property depends on the `completed` computed property.
+
+  property('completed')
+
+## Handy Helper Methods
+
+    filter()
+    filterBy()
+    invoke()
+    isEvery()
+    setEach()
+    get()
+    set()
+    send()
+    deleteRecord()
+    save()
