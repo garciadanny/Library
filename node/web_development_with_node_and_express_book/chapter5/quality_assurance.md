@@ -47,7 +47,32 @@ In web development, quality can be broken down into 4 dimensions:
 
 	Linting isn't about finding errors but about potential errors. The general concept of linting is that it identifies areas that could represent possible errors, or fragile constructs that could lead to errors in the future. We'll be using [JSHint](http://jshint.com/) for this.
 
+	```
+	npm install jshint -g
+	```
+
 5. Link Checking
 
 	Making sure there are no broken links on the site. We'll be using [LinkChecker](http://wummel.github.io/linkchecker/) for this.
 
+## GruntJS
+
+Automating QA toolchain with [GruntJS](http://gruntjs.com)
+
+Install grunt:
+
+```
+npm install grunt-cli -g
+npm install grunt --save-dev
+```
+Grunt relies on plugins to get the job done, we'll need plugins for mocha and JSHInt.
+
+```
+npm install grunt-cafe-mocha --save-dev
+npm install grunt-contrib-jshint --save-dev
+```
+
+Create a file in the root directory `Gruntfile.js`.
+
+After you've setup the `Gruntfile.js` file, run `grunt` from the command-line.
+Ensure that the web server is running.
