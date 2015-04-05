@@ -29,6 +29,16 @@ In web development, quality can be broken down into 4 dimensions:
 
 	Involves testing functionality that requires navigation from one pag to another. Since this kind of testing involves more than one component, it's generally considered integration testing. We'll be using [zombie.js](http://zombie.labnotes.org/) for this.
 
+	Run tests:
+
+```
+	mocha -u tdd -R spec TEST_FILE.JS
+```
+
+`-u tdd` specifies that our interface is TDD (it defaults to BDD).
+
+`-R spec` uses a reporter called the spec reporter which provides a little more information than the default reporter.
+
 3. Logic Testing
 
 	Disconnected from any presentation functionality. Unit and integration tests that test domain logic.
@@ -40,4 +50,4 @@ In web development, quality can be broken down into 4 dimensions:
 5. Link Checking
 
 	Making sure there are no broken links on the site. We'll be using [LinkChecker](http://wummel.github.io/linkchecker/) for this.
-	
+
