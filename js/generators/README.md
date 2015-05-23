@@ -1,6 +1,6 @@
 # Javascript Generators
 
-** A Brief Introduction**
+**A Brief Introduction**
 
 Generators are a new feature introduced in ES6. They're functions that can be paused at any time during their execution (an arbitrary amount of times), allowing other code to run during these paused times. Generators can then be un-paused at a later point in time and continue where they left off.
 
@@ -14,7 +14,7 @@ Generator functions are written like normal functions except they have an asteri
 
 *Example*:
 
-```
+```javascript
 function *foo() {
   // ...
 }
@@ -22,7 +22,7 @@ function *foo() {
 
 or 
 
-```
+```javascript
 function* foo() {
   // ...
 }
@@ -32,7 +32,7 @@ The way in which we control the execution of a generator function from the outsi
 
 *Example*:
 
-```
+```javascript
 function *foo() {
   // ...
 }
@@ -46,7 +46,7 @@ Now to start executing the code within our generator or to start *iterating on o
 
 *Example*:
 
-```
+```javascript
 function *foo() {
   console.log('Before pausing the function');
   var x = 2 + (yield 3)
@@ -70,7 +70,7 @@ Here's a more complicated example borrowed from [Kyle Simpson](http://davidwalsh
 
 *Example*:
 
-```
+```javascript
 function *foo(x) {
     var y = 2 * (yield (x + 1));
     var z = yield (y / 3);
