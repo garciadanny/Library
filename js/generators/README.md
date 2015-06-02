@@ -8,7 +8,7 @@ A generator function can only be paused from within itself, it cannot be paused 
 
 Everytime a generator is paused, you can have it send messages out with each `yield`. Everytime a generator is un-paused you can pass messages into it as well. 
 
-Generators therefore allow you to control the execution of the function as it progresses, as well as, 2-way messaging into and out of them. 
+Generators therefore allow you to control the execution of the function as it progresses, as well as, enable 2-way messaging into and out of them. 
 
 Generator functions are written like normal functions except they have an asterisk (`*`). 
 
@@ -66,7 +66,7 @@ myGenerator.next(2)
 // { value: undefined, done: true }
 ```
 
-Here's a more complicated example borrowed from [Kyle Simpson](http://davidwalsh.name/es6-generators) in a more in-depth series of posts about ES6 generators (definitely check it out). 
+Here's a more complicated example borrowed from [Kyle Simpson](http://davidwalsh.name/es6-generators) in a more in-depth series of blog posts about ES6 generators (definitely check it out). 
 
 *Example*:
 
@@ -95,6 +95,10 @@ The second time we called `next()`, we passed in 12; which was multiplied by 2 a
 
 The third time we called `next()`, we passed in 13, which was set to `z`. Then `x` (5), `y` (24), and `z` (13) are added together and returned. As you can see, the return value is set as the `value` in the object the iterator returns. 
 
+
+**That Is All**
+
+This is just a brief introduction to generators that cover the very basics; there's a lot more to them. Hopefully, this helps you at least understand what they are. If you want to learn more about them, visit the link above for an in-depth series of articles on error handling, async coding with generators, and more. 
 
 
 
