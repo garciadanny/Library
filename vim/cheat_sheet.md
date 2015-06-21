@@ -61,6 +61,10 @@
 
 `A` - Insert text at the end of the line
 
+`o` - Creates new line below the cursor and goes into INSERT mode. 
+
+`O` - Creates new line above the cursor and goes into INSERT mode. 
+
 ## Replacing Text
 
 `r[x]` - Replaces element on cursor with x.  
@@ -68,6 +72,8 @@
 `ce`or `cw` - Deletes FROM the cursor to the end of the word and goes into *insert* mode, to make changes. 
 
 `ciw` - Deletes word on cursor and goes into INSERT mode. Cursor can be anywhere on the word. Remember `c[num][motion]`
+
+`c$` - Deletes current line and goes into INSERT mode.  
 
 `:s/old/new` - Changes the first occurrence of the old word on that line. 
 
