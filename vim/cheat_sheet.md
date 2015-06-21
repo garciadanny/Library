@@ -1,4 +1,6 @@
 *Typing a number before a motion or operator repeats it nth times*
+
+[Motions & Operators](http://vimdoc.sourceforge.net/htmldoc/motion.html)
    
 ## Motions
 
