@@ -34,6 +34,7 @@
 `x` - Deletes a sinlge element on the cursor
 
 **Deleting a column**
+
 `CTRL v` - To enter visual mode
 `j` or `k` - To expand the visual selection down/up of the amount of rows you want to delete in the column
 `h` or `l` - To expand the visual selection of the # of columns you want deleted
