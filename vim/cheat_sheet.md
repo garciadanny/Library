@@ -1,24 +1,24 @@
 *Typing a number before a motion or operator repeats it nth times*
 
 [Motions & Operators](http://vimdoc.sourceforge.net/htmldoc/motion.html)
-   
+
 ## Motions
 
-`w` - Move to the beginning of the next word. 
+`w` - Move to the beginning of the next word.
 
-`e` - Move to the end of the next word. 
+`e` - Move to the end of the next word.
 
 `b` - Move to the beginning of the previous word.
 
-`ge` - Move to the end of the previous word. 
+`ge` - Move to the end of the previous word.
 
 `0` - Move to the beginning of the line (zero).
 
-`$` - Move to the end of the line. 
+`$` - Move to the end of the line.
 
-`gg` - Move to top of file. 
+`gg` - Move to top of file.
 
-`shift + g` - Move to bottom of file. 
+`shift + g` - Move to bottom of file.
 
 `line  + shift + g` - Moves you back to the line before you `gg` or `shift g`
 
@@ -29,9 +29,9 @@
 
 `de` - Deletes FROM cursor to the end of the current word (including last chr)
 
-`d$` - Deletes FROM curso to the end of the current line. 
+`d$` - Deletes FROM curso to the end of the current line.
 
-`dd` - Deletes the entire line. 
+`dd` - Deletes the entire line.
 
 `x` - Deletes a sinlge element on the cursor
 
@@ -49,7 +49,7 @@
 
 `u` - Undo the last command.
 
-`U` - Returns the line to it's original state. 
+`U` - Returns the line to it's original state.
 
 `CTRL-R` - Redo the last command.
 
@@ -67,32 +67,32 @@
 
 `A` - Insert text at the end of the line
 
-`o` - Creates new line below the cursor and goes into INSERT mode. 
+`o` - Creates new line below the cursor and goes into INSERT mode.
 
-`O` - Creates new line above the cursor and goes into INSERT mode. 
+`O` - Creates new line above the cursor and goes into INSERT mode.
 
 ## Replacing Text
 
-`r[x]` - Replaces element on cursor with x.  
+`r[x]` - Replaces element on cursor with x.
 
-`ce`or `cw` - Deletes FROM the cursor to the end of the word and goes into *insert* mode, to make changes. 
+`ce`or `cw` - Deletes FROM the cursor to the end of the word and goes into *insert* mode, to make changes.
 
 `ciw` - Deletes word on cursor and goes into INSERT mode. Cursor can be anywhere on the word. Remember `c[num][motion]`
 
-`c$` - Deletes current line and goes into INSERT mode.  
+`c$` - Deletes current line and goes into INSERT mode.
 
-`:s/old/new` - Changes the first occurrence of the old word on that line. 
+`:s/old/new` - Changes the first occurrence of the old word on that line.
 
-`:s/old/new/g` - Changes the old word globally within the line. 
+`:s/old/new/g` - Changes the old word globally within the line.
 
-`:%s/old/new/g` - Changes every the old word globally within the file. 
+`:%s/old/new/g` - Changes every the old word globally within the file.
 
-`:%s/old/new/g` - Changes every the old word globally within the file w/ a prompt to substitute or not. 
+`:%s/old/new/g` - Changes every the old word globally within the file w/ a prompt to substitute or not.
 
 
 ## Search
 
-`/ + [search_term]` - Search within the file. 
+`/ + [search_term]` - Search within the file.
 
 `n` - move to the next found search term
 
@@ -124,3 +124,5 @@
 
 `gt` - Move between tabs (`go` to `tab`)
 
+## Files
+`:Gmove <new file name>` - Uses the fugitive plugin to rename the current file
